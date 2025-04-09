@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class ArraySwapper {
+    public static int k=0;
     public static void reordering() {
         int N = 300;
         int[] array =  IntStream.range(0, N).toArray();
@@ -123,7 +124,10 @@ public class ArraySwapper {
         }
 
         normalize(probabilities);
-        Vizualizer.showChart(probabilities, type.name());
+        if(k!=3) {
+            k++;
+            Vizualizer.showChart(probabilities, type.name());
+        }
         List<Integer> reordered = weightedShuffle(array, probabilities);
         for (int i = 0; i < N; i++) {
             array[i] = reordered.get(i);
