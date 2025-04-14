@@ -1,18 +1,16 @@
-package lr2;
+package lr3;
 
 import java.util.Scanner;
 
-import static lr2.Task21.tasking21;
-import static lr2.Task22.tasking22;
-import static lr2.Task23.tasking23;
-import static lr2.Task24.tasking24;
-import static lr2.Task25.tasking25;
-import static lr2.TaskInformation.task_info;
+import static lr3.Task31.tasking31;
+import static lr3.Task32.tasking32;
+import static lr3.Task33.tasking33;
+import static lr3.TaskInformation.task_info;
+
 
 public class Main {
 
     public static void main(String[] args)  {
-
         Scanner scanner = new Scanner(System.in);
         while (true) {
             task_info();
@@ -27,19 +25,13 @@ public class Main {
             }
             switch (task_number) {
                 case 1:
-                    tasking21();
+                    tasking31();
                     break;
                 case 2:
-                    tasking22();
+                    tasking32();
                     break;
                 case 3:
-                    tasking23();
-                    break;
-                case 4:
-                    tasking24();
-                    break;
-                case 5:
-                    tasking25();
+                    tasking33();
                     break;
                 default:
                     System.out.println("Ошибка: несуществующий номер задания");
