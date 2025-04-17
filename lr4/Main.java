@@ -1,6 +1,7 @@
 package lr4;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static lr4.Task41.tasking41;
@@ -8,7 +9,7 @@ import static lr4.Task42.tasking42;
 import static lr4.TaskInformation.task_info;
 
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             task_info();

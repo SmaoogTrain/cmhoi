@@ -17,7 +17,7 @@ public class Task33 {
         TreeNode[] rootRef = { root };
         TreePanel treePanel = new TreePanel(rootRef[0]);
 
-        JFrame frame = new JFrame("BST with T(x) and D(x)");
+        JFrame frame = new JFrame("Бинарное дерево с алгоритмами T(x) и D(x)");
         JTextField inputField = new JTextField(10);
         JButton insertButton = new JButton("Вставить (T)");
         JButton deleteButton = new JButton("Удалить (D)");

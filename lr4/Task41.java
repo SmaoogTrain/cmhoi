@@ -1,20 +1,30 @@
 package lr4;
 
+
+import javax.swing.*;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class Task41 {
-    public static void tasking41() {
-        AVLTree tree = new AVLTree();
+    public static void tasking41() throws IOException {
+        AVLTreeVisualizer tree = new AVLTreeVisualizer();
 
-        int[] keys = {30, 20, 40, 10, 25, 5, 35, 50, 1};
-        for (int key : keys) {
-            tree.insert(key);
-            tree.printTree();
-            System.out.println("----------");
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\programming\\java\\BTrees\\numbertree.txt"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            for (String s : line.trim().split("\\s+")) {
+                if (!s.isEmpty()) {
+                    tree.insert(Integer.parseInt(s));
+                }
+            }
         }
+
+        JFrame frame = new JFrame("Сбалансированное дерево");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+        frame.add(tree);
+        frame.setVisible(true);
     }
 }

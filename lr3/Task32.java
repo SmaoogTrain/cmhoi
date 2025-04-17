@@ -11,15 +11,16 @@ import java.util.List;
 
 public class Task32 {
     public static void tasking32(){
-        List<Integer> numbers = readNumbersFromFile("C:\\programming\\java\\BTrees\\numbertree.txt");
+
         TreeNode root = null;
+        List<Integer> numbers = readNumbersFromFile("C:\\programming\\java\\BTrees\\numbertree.txt");
         for (int num : numbers) {
             root = insertIntoBST(root, num);
         }
 
         TreeNode finalRoot = root;
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Binary Tree Visualizer");
+            JFrame frame = new JFrame("Бинарное дерево");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.add(new TreePanel(finalRoot));
             frame.setSize(800, 600);
