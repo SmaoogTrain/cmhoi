@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         while (true) {
+            System.out.println();
             task_info();
             System.out.println("Введите номер задания:");
             int task_number = 0;
