@@ -47,6 +47,7 @@ public class Main {
                     System.out.println("Ошибка: несуществующий номер задания");
             }
         }
+        scanner.close();
 
     }
 }
