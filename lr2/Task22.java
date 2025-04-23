@@ -17,17 +17,17 @@ public class Task22 {
     }
 
     static void simulate(String name, Supplier<double[]> distributionGenerator) {
-        System.out.println("=== " + name + " Распределение ===");
+        System.out.println(name + " Распределение");
 
         double[] probabilities = distributionGenerator.get();
         int[] tape = generateTape(probabilities);
 
-        // Подсчёт средней стоимости (среднего числа сравнений)
+        // Подсчёт средней стоимости
         double unorderedCost = averageSearchCost(tape, probabilities, false);
         double orderedCost = averageSearchCost(tape, probabilities, true);
 
-        System.out.printf("Неупорядоченная средняя стоимость: %.3f%n", unorderedCost);
-        System.out.printf("Упорядоченная средняя стоимость:   %.3f%n%n", orderedCost);
+        System.out.printf("     Неупорядоченная средняя стоимость: %.3f%n", unorderedCost);
+        System.out.printf("     Упорядоченная средняя стоимость:   %.3f%n%n", orderedCost);
     }
 
     // Генерация записей на ленте согласно распределению вероятностей
@@ -94,7 +94,7 @@ public class Task22 {
         return probs;
     }
 
-    // Генерация биномиального распределения
+    //Генерация биномиального распределения
     static double[] binomialDistribution() {
         double[] probs = new double[N];
         for (int i = 0; i < N; i++) {
@@ -105,12 +105,12 @@ public class Task22 {
         return probs;
     }
 
-    // Функция плотности биномиального распределения
+    //Функция плотности биномиального распределения
     static double binomialPMF(int n, int k, double p) {
         return binomialCoeff(n, k) * Math.pow(p, k) * Math.pow(1 - p, n - k);
     }
 
-    // Вычисление биномиального коэффициента
+    //Биноминальный коэффициент
     static long binomialCoeff(int n, int k) {
         if (k == 0 || k == n) return 1;
         long res = 1;
@@ -119,7 +119,7 @@ public class Task22 {
         }
         return res;
     }
-
+    //Нормализация
     static void normalize(double[] array, double sum) {
         for (int i = 0; i < array.length; i++) {
             array[i] /= sum;

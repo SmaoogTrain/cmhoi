@@ -1,6 +1,7 @@
 package lr5;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static lr5.Task51.tasking51;
@@ -8,7 +9,7 @@ import static lr5.Task52.tasking52;
 import static lr5.TaskInformation.task_info;
 
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println();
@@ -24,10 +25,16 @@ public class Main {
             }
             switch (task_number) {
                 case 1:
+                    System.out.println("\nРешение задания 1:");
                     tasking51();
+                    System.out.print("Нажмите Enter, чтобы продолжить...");
+                    System.in.read();
                     break;
                 case 2:
+                    System.out.println("\nРешение задания 2:");
                     tasking52();
+                    System.out.print("Нажмите Enter, чтобы продолжить...");
+                    System.in.read();
                     break;
                 default:
                     System.out.println("Ошибка: несуществующий номер задания");

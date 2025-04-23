@@ -31,7 +31,7 @@ public class Main {
                     String path;
                     File file;
                     do {
-                        path = "C:\\programming\\java\\TextGenerating\\txt" + one + ".txt";
+                        path = "txt" + one + ".txt";
                         file = new File(path);
                         one++;
                     }while (file.exists());

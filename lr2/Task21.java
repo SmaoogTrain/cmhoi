@@ -18,7 +18,7 @@ public class Task21 {
 
 
     public static void tasking21(){
-        int n = 1000; // Размер массива
+        int n = 1000;
 
         double[] probabilities = generateProbabilities(n);
 
@@ -39,7 +39,6 @@ public class Task21 {
         int[] worstOrder = Arrays.stream(worstEntries).mapToInt(e -> e.index).toArray();
         double worstAvg = averageComparisons(probabilities, worstOrder);
 
-        // Проверка соотношения
         double sum = bestAvg + worstAvg;
         double expectedSum = n + 1;
 
@@ -48,9 +47,9 @@ public class Task21 {
         System.out.printf("Сумма: %.3f, Ожидаемая сумма (n + 1): %d%n", sum, n + 1);
 
         if (Math.abs(sum - expectedSum) < 1e-9) {
-            System.out.println("✔ Простое соотношение подтверждено: best + worst = n + 1");
+            System.out.println("Простое соотношение подтверждено: best + worst = n + 1");
         } else {
-            System.out.println("✘ Соотношение не подтверждено");
+            System.out.println("Соотношение не подтверждено");
         }
     }
 
@@ -62,7 +61,7 @@ public class Task21 {
             raw[i] = rand.nextDouble();
             total += raw[i];
         }
-        // Нормализация
+
         for (int i = 0; i < n; i++) {
             raw[i] /= total;
         }

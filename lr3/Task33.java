@@ -10,7 +10,7 @@ import java.util.List;
 public class Task33 {
     public static void tasking33(){
         TreeNode root = null;
-        for (int num : readNumbersFromFile("C:\\programming\\java\\BTrees\\numbertree.txt")) {
+        for (int num : readNumbersFromFile("numbertree.txt")) {
             root = insert(root, num);
         }
 
@@ -59,6 +59,7 @@ public class Task33 {
         frame.setSize(900, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        System.out.println("Бинарное дерево с алгоритмами  T и D достпуно в графическом виде в отдельном окне.");
     }
 
     static class TreeNode {
@@ -122,7 +123,7 @@ public class Task33 {
 
     static JTextArea logArea = new JTextArea(5, 40);
     static void log(String message) {
-        System.out.println(message);
+        //System.out.println(message);
         logArea.append(message + "\n");
     }
 

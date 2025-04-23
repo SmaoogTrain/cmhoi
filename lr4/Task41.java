@@ -11,7 +11,7 @@ public class Task41 {
     public static void tasking41() throws IOException {
         AVLTreeVisualizer tree = new AVLTreeVisualizer();
 
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\programming\\java\\BTrees\\numbertree.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("numbertree.txt"));
         String line;
         while ((line = reader.readLine()) != null) {
             for (String s : line.trim().split("\\s+")) {
@@ -26,5 +26,6 @@ public class Task41 {
         frame.setSize(800, 600);
         frame.add(tree);
         frame.setVisible(true);
+        System.out.println("Результат работы алгоритма А приведен графически в отдельном окне.");
     }
 }

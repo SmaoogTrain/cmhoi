@@ -13,7 +13,7 @@ public class Task32 {
     public static void tasking32(){
 
         TreeNode root = null;
-        List<Integer> numbers = readNumbersFromFile("C:\\programming\\java\\BTrees\\numbertree.txt");
+        List<Integer> numbers = readNumbersFromFile("numbertree.txt");
         for (int num : numbers) {
             root = insertIntoBST(root, num);
         }
@@ -26,9 +26,9 @@ public class Task32 {
             frame.setSize(800, 600);
             frame.setVisible(true);
         });
+        System.out.println("Бинарное дерево создано графически в отдельном окне.");
     }
 
-    // Чтение чисел из файла
     static List<Integer> readNumbersFromFile(String filename) {
         List<Integer> numbers = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -42,7 +42,6 @@ public class Task32 {
         return numbers;
     }
 
-    // Построение сбалансированного BST из отсортированного списка
     static TreeNode buildBalancedBST(List<Integer> nums, int start, int end) {
         if (start > end) return null;
         int mid = (start + end) / 2;
@@ -52,7 +51,6 @@ public class Task32 {
         return node;
     }
 
-    // Класс узла дерева
     static class TreeNode {
         int value;
         TreeNode left, right;
@@ -62,7 +60,6 @@ public class Task32 {
         }
     }
 
-    // Панель для отрисовки дерева
     static class TreePanel extends JPanel {
         TreeNode root;
         int nodeRadius = 20;

@@ -24,10 +24,16 @@ public class Main {
             }
             switch (task_number) {
                 case 1:
+                    System.out.println("\nРешение задания 1:");
                     tasking41();
+                    System.out.print("\nНажмите Enter, чтобы продолжить...");
+                    System.in.read();
                     break;
                 case 2:
+                    System.out.println("\nРешение задания 2:");
                     tasking42();
+                    System.out.print("\nНажмите Enter, чтобы продолжить...");
+                    System.in.read();
                     break;
                 default:
                     System.out.println("Ошибка: несуществующий номер задания");
