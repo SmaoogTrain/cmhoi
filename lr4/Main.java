@@ -4,6 +4,7 @@ package lr4;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static Result.Result.resulting;
 import static lr4.Task41.tasking41;
 import static lr4.Task42.tasking42;
 import static lr4.TaskInformation.task_info;
@@ -26,14 +27,12 @@ public class Main {
                 case 1:
                     System.out.println("\nРешение задания 1:");
                     tasking41();
-                    System.out.print("\nНажмите Enter, чтобы продолжить...");
-                    System.in.read();
+                    resulting();
                     break;
                 case 2:
                     System.out.println("\nРешение задания 2:");
                     tasking42();
-                    System.out.print("\nНажмите Enter, чтобы продолжить...");
-                    System.in.read();
+                    resulting();
                     break;
                 default:
                     System.out.println("Ошибка: несуществующий номер задания");

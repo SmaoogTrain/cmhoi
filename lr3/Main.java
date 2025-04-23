@@ -3,6 +3,7 @@ package lr3;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static Result.Result.resulting;
 import static lr3.Task31.tasking31;
 import static lr3.Task32.tasking32;
 import static lr3.Task33.tasking33;
@@ -28,20 +29,17 @@ public class Main {
                 case 1:
                     System.out.println("\nРешение задания 1:");
                     tasking31();
-                    System.out.print("\nНажмите Enter, чтобы продолжить...");
-                    System.in.read();
+                    resulting();
                     break;
                 case 2:
                     System.out.println("\nРешение задания 2:");
                     tasking32();
-                    System.out.print("\nНажмите Enter, чтобы продолжить...");
-                    System.in.read();
+                    resulting();
                     break;
                 case 3:
                     System.out.println("\nРешение задания 3:");
                     tasking33();
-                    System.out.print("\nНажмите Enter, чтобы продолжить...");
-                    System.in.read();
+                    resulting();
                     break;
                 default:
                     System.out.println("Ошибка: несуществующий номер задания");
